@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Grid" load_steps=2 format=3 uid="uid://cfjlunvnwemen"]
+
+[ext_resource type="Script" uid="uid://chyvc33naxei1" path="res://GameBoard/grid.gd" id="1_uso6g"]
+
+[resource]
+script = ExtResource("1_uso6g")
+metadata/_custom_type_script = "uid://chyvc33naxei1"

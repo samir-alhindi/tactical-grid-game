@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://dh3a2anvqiv00"]
+
+[ext_resource type="Script" uid="uid://bi2t1q4ds7rdb" path="res://unit/unit.gd" id="1_hs7ws"]
+[ext_resource type="Texture2D" uid="uid://denfmapcd2ey4" path="res://Units/unit_shadow.svg" id="1_hy15m"]
+[ext_resource type="Texture2D" uid="uid://blacfb2pj4b5k" path="res://Units/squirrel.png" id="2_3k25b"]
+
+[sub_resource type="Animation" id="Animation_hy15m"]
+resource_name = "idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D/Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3k25b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D/Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hs7ws"]
+resource_name = "selected"
+length = 1.4
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D/Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.88841975, 0.64995646, 7.70092e-07, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hs7ws"]
+_data = {
+&"RESET": SubResource("Animation_3k25b"),
+&"idle": SubResource("Animation_hy15m"),
+&"selected": SubResource("Animation_hs7ws")
+}
+
+[node name="Unit" type="Path2D"]
+script = ExtResource("1_hs7ws")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+unique_name_in_owner = true
+rotates = false
+loop = false
+
+[node name="Shadow" type="Sprite2D" parent="PathFollow2D"]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 0.44313726)
+texture = ExtResource("1_hy15m")
+
+[node name="Sprite" type="Sprite2D" parent="PathFollow2D"]
+unique_name_in_owner = true
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_3k25b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_hs7ws")
+}
+autoplay = "idle"
