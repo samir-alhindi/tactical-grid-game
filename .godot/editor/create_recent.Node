@@ -1,6 +1,7 @@
+Timer
+Sprite2D
 TileMapLayer
 Node2D
 AnimationPlayer
-Sprite2D
 PathFollow2D
 Path2D
