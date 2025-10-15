@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://brs6u8683174i"]
 
-[ext_resource type="Texture2D" uid="uid://c03mkij0daakt" path="res://Background/grasslands.png" id="1_2ycod"]
+[ext_resource type="Texture2D" uid="uid://c03mkij0daakt" path="res://background/grasslands.png" id="1_2ycod"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2ycod"]
 load_path = "res://.godot/imported/grasslands.png-350b47260edad6ae069b528460e4d1b5.ctex"
@@ -455,12 +455,12 @@ terrain_set_0/terrain_0/name = "pretty"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_5cy74")
 
-[node name="TileMap" type="Node2D"]
+[node name="GrassyTileMap" type="Node2D"]
 
 [node name="Grass" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_ja8sg")
 
-[node name="Base" type="TileMapLayer" parent="."]
+[node name="Patches" type="TileMapLayer" parent="."]
 use_parent_material = true
 tile_set = SubResource("1")
 

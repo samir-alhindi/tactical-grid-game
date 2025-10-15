@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cml5w86tky8el"]
 
-[ext_resource type="TileSet" uid="uid://b6g1x5agi4pyu" path="res://GameBoard/unit_path_tileset.tres" id="1_dvhs2"]
+[ext_resource type="TileSet" uid="uid://b6g1x5agi4pyu" path="res://unit_path/unit_path_tileset.tres" id="1_dvhs2"]
 [ext_resource type="Script" uid="uid://wvsxv6g4l618" path="res://unit_path/unit_path.gd" id="2_a15fl"]
 
 [node name="UnitPath" type="TileMapLayer"]

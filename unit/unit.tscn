@@ -1,13 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://dh3a2anvqiv00"]
 
 [ext_resource type="Script" uid="uid://bi2t1q4ds7rdb" path="res://unit/unit.gd" id="1_hs7ws"]
-[ext_resource type="Texture2D" uid="uid://denfmapcd2ey4" path="res://Units/unit_shadow.svg" id="1_hy15m"]
-[ext_resource type="Texture2D" uid="uid://blacfb2pj4b5k" path="res://Units/squirrel.png" id="2_3k25b"]
+[ext_resource type="Texture2D" uid="uid://denfmapcd2ey4" path="res://unit/unit_shadow.svg" id="1_hy15m"]
+[ext_resource type="Texture2D" uid="uid://blacfb2pj4b5k" path="res://unit/squirrel.png" id="2_3k25b"]
 
-[sub_resource type="Animation" id="Animation_hy15m"]
-resource_name = "idle"
+[sub_resource type="Animation" id="Animation_3k25b"]
 length = 0.001
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -21,8 +19,10 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_3k25b"]
+[sub_resource type="Animation" id="Animation_hy15m"]
+resource_name = "idle"
 length = 0.001
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://denfmapcd2ey4"
-path="res://.godot/imported/unit_shadow.svg-3b1ef9774820a8cb875ace739806bcde.ctex"
+uid="uid://d1lyjg1kk42w3"
+path="res://.godot/imported/bugcat.png-77b3c034ea8f29ad263f5c708de9e823.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Units/unit_shadow.svg"
-dest_files=["res://.godot/imported/unit_shadow.svg-3b1ef9774820a8cb875ace739806bcde.ctex"]
+source_file="res://unit/bugcat.png"
+dest_files=["res://.godot/imported/bugcat.png-77b3c034ea8f29ad263f5c708de9e823.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

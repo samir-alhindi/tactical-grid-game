@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfrwb65l7fdfm"]
 
 [ext_resource type="Script" uid="uid://cwsudjtyglayk" path="res://cursor/cursor.gd" id="1_g0wji"]
-[ext_resource type="Texture2D" uid="uid://ikn3to4c76am" path="res://GameBoard/Cursor/menu_selection_arrow.png" id="1_isnha"]
+[ext_resource type="Texture2D" uid="uid://ikn3to4c76am" path="res://cursor/menu_selection_arrow.png" id="1_isnha"]
 
 [node name="Cursor" type="Node2D"]
 script = ExtResource("1_g0wji")

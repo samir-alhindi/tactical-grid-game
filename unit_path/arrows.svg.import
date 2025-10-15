@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cinl0lbrsnbe5"
-path="res://.godot/imported/bear.png-1eb6314127ece74a9413fa053b22def1.ctex"
+uid="uid://bbc5hujhj7t2a"
+path="res://.godot/imported/arrows.svg-10f2ec85f293c82511eb3f098ceec165.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Units/bear.png"
-dest_files=["res://.godot/imported/bear.png-1eb6314127ece74a9413fa053b22def1.ctex"]
+source_file="res://unit_path/arrows.svg"
+dest_files=["res://.godot/imported/arrows.svg-10f2ec85f293c82511eb3f098ceec165.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

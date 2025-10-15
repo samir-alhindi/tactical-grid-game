@@ -37,14 +37,6 @@ func _ready() -> void:
 	self.cell = grid.calculate_grid_coordinates(position)
 	position = grid.calculate_map_position(cell)
 	curve = Curve2D.new()
-	
-	var points := [
-		Vector2(2, 2),
-		Vector2(2, 5),
-		Vector2(8, 5),
-		Vector2(8, 7),
-	]
-	walk_along(points)
 
 func walk_along(path: PackedVector2Array) -> void:
 	if path.size() == 0:

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bctcmd1m0jq5r"]
+
+[ext_resource type="Script" uid="uid://bto1aebchluug" path="res://game_board/gameboard.gd" id="1_vjfa7"]
+[ext_resource type="PackedScene" uid="uid://dl1quu6lnurmh" path="res://unit_overlay/unit_overlay.tscn" id="2_tab2w"]
+
+[node name="Gameboard" type="Node2D"]
+script = ExtResource("1_vjfa7")
+
+[node name="UnitOverlay" parent="." instance=ExtResource("2_tab2w")]
