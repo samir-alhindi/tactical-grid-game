@@ -1,6 +1,6 @@
+TileMapLayer
 Timer
 Sprite2D
-TileMapLayer
 Node2D
 AnimationPlayer
 PathFollow2D
