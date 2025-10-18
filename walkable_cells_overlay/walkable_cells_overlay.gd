@@ -1,5 +1,5 @@
 ## Draws an overlay over an array of cells.
-class_name UnitOverlay extends TileMapLayer
+class_name WalkableCellsOverlay extends TileMapLayer
 
 func draw(cells: Array) -> void:
 	clear()

@@ -1,10 +1,9 @@
-res://Background/grassy_tile_map.tscn
-res://GameBoard/unit_path_tileset.tres
-res://unit_path/unit_path.tscn
-res://unit_path/unit_path_tileset.tres
-res://unit/unit.tscn
-res://main/main.tscn
-res://unit_overlay/unit_overlay.tscn
-res://background/grassy_tile_map.tscn
 res://game_board/gameboard.tscn
+res://walkable_cells_overlay/unit_overlay_tileset.tres
+res://walkable_cells_overlay/walkable_cells_overlay.tscn
+res://walkable_cells_overlay/walkable_cells_overlay.gd
+res://unit_path/unit_path_tileset.tres
+res://main/main.tscn
 res://game_board/gameboard.gd
+res://cursor/cursor.gd
+res://unit_path/unit_path.gd

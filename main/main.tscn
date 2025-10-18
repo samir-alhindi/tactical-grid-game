@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://d15a3tdmw2ol5"]
+[gd_scene load_steps=6 format=4 uid="uid://d15a3tdmw2ol5"]
 
 [ext_resource type="PackedScene" uid="uid://brs6u8683174i" path="res://background/grassy_tile_map.tscn" id="1_xwkvk"]
 [ext_resource type="PackedScene" uid="uid://bctcmd1m0jq5r" path="res://game_board/gameboard.tscn" id="2_3wy1v"]
 [ext_resource type="PackedScene" uid="uid://dh3a2anvqiv00" path="res://unit/unit.tscn" id="2_pjrb6"]
 [ext_resource type="Texture2D" uid="uid://blacfb2pj4b5k" path="res://unit/squirrel.png" id="3_xwkvk"]
-[ext_resource type="PackedScene" uid="uid://bfrwb65l7fdfm" path="res://cursor/cursor.tscn" id="4_c651c"]
 [ext_resource type="Texture2D" uid="uid://d1lyjg1kk42w3" path="res://unit/bugcat.png" id="5_kfbq2"]
 
 [node name="Main" type="Node2D"]
@@ -30,7 +29,5 @@ skin = ExtResource("3_xwkvk")
 move_range = 8
 skin = ExtResource("5_kfbq2")
 move_speed = 800.0
-
-[node name="Cursor" parent="." instance=ExtResource("4_c651c")]
 
 [editable path="GrassyTileMap"]

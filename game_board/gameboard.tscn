@@ -1,9 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://bctcmd1m0jq5r"]
+[gd_scene load_steps=5 format=3 uid="uid://bctcmd1m0jq5r"]
 
 [ext_resource type="Script" uid="uid://bto1aebchluug" path="res://game_board/gameboard.gd" id="1_vjfa7"]
-[ext_resource type="PackedScene" uid="uid://dl1quu6lnurmh" path="res://unit_overlay/unit_overlay.tscn" id="2_tab2w"]
+[ext_resource type="PackedScene" uid="uid://dl1quu6lnurmh" path="res://walkable_cells_overlay/walkable_cells_overlay.tscn" id="2_tab2w"]
+[ext_resource type="PackedScene" uid="uid://cml5w86tky8el" path="res://unit_path/unit_path.tscn" id="3_yx0k5"]
+[ext_resource type="PackedScene" uid="uid://bfrwb65l7fdfm" path="res://cursor/cursor.tscn" id="4_ty78o"]
 
 [node name="Gameboard" type="Node2D"]
 script = ExtResource("1_vjfa7")
 
-[node name="UnitOverlay" parent="." instance=ExtResource("2_tab2w")]
+[node name="WalkableCellsOverlay" parent="." instance=ExtResource("2_tab2w")]
+unique_name_in_owner = true
+
+[node name="UnitPath" parent="." instance=ExtResource("3_yx0k5")]
+unique_name_in_owner = true
+
+[node name="Cursor" parent="." instance=ExtResource("4_ty78o")]
+
+[connection signal="accept_pressed" from="Cursor" to="." method="_on_cursor_accept_pressed"]
+[connection signal="moved" from="Cursor" to="." method="_on_cursor_moved"]

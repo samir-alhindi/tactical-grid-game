@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://dl1quu6lnurmh"]
-
-[ext_resource type="TileSet" path="res://unit_overlay/unit_overlay_tileset.tres" id="1_31r6a"]
-[ext_resource type="Script" uid="uid://5pak61ydm0xr" path="res://unit_overlay/unit_overlay.gd" id="2_po5y8"]
-
-[node name="UnitOverlay" type="TileMapLayer"]
-modulate = Color(1, 1, 1, 0.35686275)
-tile_set = ExtResource("1_31r6a")
-script = ExtResource("2_po5y8")

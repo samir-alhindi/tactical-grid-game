@@ -1,8 +1,8 @@
 class_name Cursor extends Node2D
 
 ## Emitted when clicking on the currently hovered cell or when pressing "ui_accept".
-signal accept_pressed(cell)
-signal moved(new_cell)
+signal accept_pressed(cell: Vector2i)
+signal moved(new_cell: Vector2i)
 
 @export var grid: Grid = preload("uid://cfjlunvnwemen")
 @export var ui_cooldown: float = 0.1

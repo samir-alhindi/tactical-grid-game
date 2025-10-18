@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Tactical RPG Movement (start)"
+config/name="Tactical grid game"
 run/main_scene="uid://d15a3tdmw2ol5"
 config/features=PackedStringArray("4.5")
-config/icon="res://icon.png"
+config/icon="uid://cinl0lbrsnbe5"
 
 [display]
 
