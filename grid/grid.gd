@@ -6,6 +6,9 @@ class_name Grid extends Resource
 ## The size of a cell in pixels.
 @export var cell_size := Vector2(80,80)
 
+enum Directions {UP, DOWN, LEFT, RIGHT}
+const DIRECTIONS = [Vector2.LEFT, Vector2.RIGHT, Vector2.UP, Vector2.DOWN]
+
 ## Half of `cell_size`.
 ## We will use this to calculate the center of a grid cell in pixels, on the screen.
 ## That's how we can place units in the center of a cell.

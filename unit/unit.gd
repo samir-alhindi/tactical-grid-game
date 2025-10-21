@@ -1,12 +1,15 @@
 class_name Unit extends Path2D
 
-signal walk_finished
+signal turn_finished
 
 @export var grid: Grid = preload("uid://cfjlunvnwemen")
 @export var move_range := 6
 @export var skin: Texture
 @export var skin_offset := Vector2.ZERO 
+@export var unit_name: StringName = "name here"
 @export var move_speed := 600.0
+@export var strength: int = 10
+@export var health: int = 100
 
 var cell := Vector2.ZERO:
 	set = set_cell
@@ -54,4 +57,50 @@ func _process(delta: float) -> void:
 		%PathFollow2D.progress_ratio = 0.0
 		position = grid.calculate_map_position(cell)
 		curve.clear_points()
-		walk_finished.emit()
+		select_option()
+
+func select_option() -> void:
+	var create_button := func(text: String, callable: Callable) -> void:
+		var button := Button.new()
+		%Options.add_child(button)
+		button.text = text
+		button.pressed.connect(callable)
+	
+	%UI.show()
+	create_button.call("do nothing", func():
+		%UI.hide()
+		for child: Node in %Options.get_children():
+			child.queue_free()
+		turn_finished.emit()
+		)
+	
+	var units: Dictionary[Unit, Vector2] = {}
+	for dir: Vector2 in Grid.DIRECTIONS:
+		var current := self.cell + dir
+		if current in Gameboard.units:
+			var unit: Unit = Gameboard.units[current]
+			if unit.has_method("on_attacked"):
+				units[unit] = dir
+	
+	for unit: Unit in units:
+		create_button.call("attack "+unit.unit_name, func():
+			unit.on_attacked(strength, units[unit])
+			%UI.hide()
+			for child: Node in %Options.get_children():
+				child.queue_free()
+			turn_finished.emit()
+			)
+
+func on_attacked(amount: int, direction: Vector2) -> void:
+	var tween := create_tween()#.set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_BOUNCE)
+	var og_pos := position
+	var new_pos = grid.calculate_map_position(cell + direction)
+	tween.tween_property(self, "position", new_pos, 0.2)
+	tween.tween_property(self, "position", og_pos, 0.1)
+	health -= amount
+	if health <= 0:
+		die()
+
+func die() -> void:
+	Gameboard.units.erase(cell)
+	queue_free()

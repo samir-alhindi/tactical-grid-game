@@ -1,10 +1,9 @@
 class_name Gameboard extends Node2D
 
-const DIRECTIONS = [Vector2.LEFT, Vector2.RIGHT, Vector2.UP, Vector2.DOWN]
 @export var grid: Grid = preload("uid://cfjlunvnwemen")
 
 ## Mapping of coordinates of a cell to a reference to the unit it contains.
-var units: Dictionary[Vector2,Unit] = {}
+static var units: Dictionary[Vector2,Unit] = {}
 var active_unit: Unit
 var walkable_cells := []
 
@@ -24,7 +23,6 @@ func _reinitialize() -> void:
 		if not unit:
 			continue
 		units[unit.cell] = unit
-	print(units)
 
 ## Returns an array of cells a given unit can walk using the flood fill algorithm.
 func get_walkable_cells(unit: Unit) -> Array:
@@ -48,7 +46,7 @@ func _flood_fill(cell: Vector2, max_distance: int) -> PackedVector2Array:
 			continue
 		
 		walkable_cells.append(current)
-		for direction in DIRECTIONS:
+		for direction in Grid.DIRECTIONS:
 			var coordinates: Vector2 = current + direction
 			if is_occupied(coordinates):
 				continue
@@ -83,9 +81,8 @@ func move_active_unit(new_cell: Vector2) -> void:
 	units[new_cell] = active_unit
 	deselect_active_unit()
 	active_unit.walk_along(%UnitPath.current_path)
-	await active_unit.walk_finished
+	await active_unit.turn_finished
 	clear_active_unit()
-
 
 func _on_cursor_moved(new_cell: Vector2i) -> void:
 	if active_unit and active_unit.is_selected:

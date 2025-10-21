@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://pmpddo7kti37"]
+
+[ext_resource type="Script" uid="uid://b6hndro4oq0yq" path="res://components/attackable.gd" id="1_qys57"]
+
+[node name="Attackable" type="Node"]
+script = ExtResource("1_qys57")
